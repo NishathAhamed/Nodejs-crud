@@ -1,5 +1,6 @@
 const express=require('express'),app=express();
-const db=require('./db')
+const db=require('./db'),employeeRoutes=require('./controllers/employee.controller')
+app.use('/api/employees',employeeRoutes)
 
 
 db.query("SELECT 1")
