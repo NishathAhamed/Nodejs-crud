@@ -1,5 +1,7 @@
-const express=require('express'),app=express();
+const express=require('express'),app=express(),bodyparser=require('body-parser');
 const db=require('./db'),employeeRoutes=require('./controllers/employee.controller')
+
+app.use(bodyparser.json())
 app.use('/api/employees',employeeRoutes)
 
 
