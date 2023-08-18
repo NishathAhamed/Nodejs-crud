@@ -8,6 +8,4 @@ var mysqlpool=mysql.createPool({
 
 });
 
-mysqlpool.query("SELECT 1")
-.then(data=>console.log(data))
-.catch(err=>console.log('db connection failed. \n'+err))
+module.exports=mysqlpool
