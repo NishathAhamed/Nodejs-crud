@@ -8,4 +8,12 @@ router.get('/',async(req,res)=>{
    res.send(employees)
 })
 
+router.get('/:id',async(req,res)=>{
+    const employee=await service.getAllEmployeeById(req.params.id)
+     res.send(employee)
+  })
+  
+
+
+
 module.exports=router;
